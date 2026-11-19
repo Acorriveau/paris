@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#659276">
+  <meta name="description" content="A comic-book discovery hub for new releases, hot topics, and fan-favorite series.">
+  <title>Panel — Comic Book Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="wordmark" href="#" aria-label="Panel home">PANEL<span>.</span></a>
+    <button class="icon-button search-toggle" id="searchToggle" aria-label="Open search" aria-expanded="false">
+      <span class="search-lens"></span>
+    </button>
+    <div class="search-panel" id="searchPanel">
+      <label class="sr-only" for="comicSearch">Search comics</label>
+      <input id="comicSearch" type="search" placeholder="Search comics, heroes, publishers…">
+      <button id="clearSearch" aria-label="Clear search">×</button>
+    </div>
+  </header>
+
+  <nav class="drawer" id="drawer" aria-hidden="true">
+    <a href="#hot-topics">Hot Topics</a>
+    <a href="#new-releases">New Releases</a>
+    <a href="#marvel">Marvel</a>
+    <a href="#dc">DC</a>
+    <a href="#indie">Indie & Beyond</a>
+  </nav>
+  <div class="scrim" id="scrim"></div>
+
+  <main>
+    <section class="hero" id="hot-topics" aria-label="Hot topics">
+      <div class="hero-image" id="heroImage"></div>
+      <div class="hero-shade"></div>
+      <h1>Hot Topics</h1>
+      <div class="hero-caption">
+        <span class="eyebrow">THE COMICS EVERYONE'S TALKING ABOUT</span>
+        <p id="heroTitle">Big stories. Bigger worlds.</p>
+      </div>
+      <div class="hero-dots" id="heroDots" aria-label="Hot topic slides"></div>
+    </section>
+
+    <section class="catalog-section" id="new-releases">
+      <div class="section-heading">
+        <h2>New Releases</h2>
+        <span class="section-note">Fresh off the rack</span>
+      </div>
+      <div class="comic-row-wrap">
+        <button class="row-arrow prev" aria-label="Scroll New Releases left">‹</button>
+        <div class="comic-row" data-row="new"></div>
+        <button class="row-arrow next" aria-label="Scroll New Releases right">›</button>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="trending">
+      <div class="section-heading"><h2>Trending Now</h2><span class="section-note">Fan favorites this week</span></div>
+      <div class="comic-row-wrap">
+        <button class="row-arrow prev" aria-label="Scroll Trending Now left">‹</button>
+        <div class="comic-row" data-row="trending"></div>
+        <button class="row-arrow next" aria-label="Scroll Trending Now right">›</button>
+      </div>
+    </section>
+
+    <section class="catalog-section publisher-section" id="marvel">
+      <div class="section-heading"><h2>Marvel</h2><span class="section-note">The house of ideas</span></div>
+      <div class="comic-row-wrap">
+        <button class="row-arrow prev" aria-label="Scroll Marvel left">‹</button>
+        <div class="comic-row" data-row="marvel"></div>
+        <button class="row-arrow next" aria-label="Scroll Marvel right">›</button>
+      </div>
+    </section>
+
+    <section class="catalog-section publisher-section" id="dc">
+      <div class="section-heading"><h2>DC</h2><span class="section-note">Legends live here</span></div>
+      <div class="comic-row-wrap">
+        <button class="row-arrow prev" aria-label="Scroll DC left">‹</button>
+        <div class="comic-row" data-row="dc"></div>
+        <button class="row-arrow next" aria-label="Scroll DC right">›</button>
+      </div>
+    </section>
+
+    <section class="catalog-section publisher-section" id="indie">
+      <div class="section-heading"><h2>Indie &amp; Beyond</h2><span class="section-note">Discover your next obsession</span></div>
+      <div class="comic-row-wrap">
+        <button class="row-arrow prev" aria-label="Scroll Indie and Beyond left">‹</button>
+        <div class="comic-row" data-row="indie"></div>
+        <button class="row-arrow next" aria-label="Scroll Indie and Beyond right">›</button>
+      </div>
+    </section>
+
+    <p class="catalog-status" id="catalogStatus" aria-live="polite"></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-mark" aria-label="Panel logo"><span>P</span></div>
+      <div class="footer-links">
+        <a href="#help">Help / FAQs</a><a href="#internships">Internships</a>
+        <a href="#advertising">Advertising</a><a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms</a><a href="#digital">Redeem Digital Comics</a>
+        <a href="#careers">Careers</a><a href="#contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="socials" aria-label="Social links (decorative)">
+      <a href="#" aria-label="Facebook" data-inert>f</a><a href="#" aria-label="X" data-inert>𝕏</a>
+      <a href="#" aria-label="Instagram" data-inert>◎</a><a href="#" aria-label="Tumblr" data-inert>t</a>
+      <a href="#" aria-label="YouTube" data-inert>▶</a><a href="#" aria-label="Snapchat" data-inert>♧</a>
+      <a href="#" aria-label="Pinterest" data-inert>p</a><a href="#" aria-label="Twitch" data-inert>▣</a>
+      <a href="#" aria-label="TikTok" data-inert>♪</a>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> PANEL. A comic fan's daily pull list.</span><span id="updatedAt">Updated daily</span></div>
+  </footer>
+
+  <script src="comics.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
